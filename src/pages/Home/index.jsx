@@ -174,7 +174,7 @@ const Home = () => {
               Consultoría Integral para tu Empresa
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed">
-              Impulsamos tu crecimiento con soluciones en asesoría fiscal, contabilidad, cumplimiento, nóminas y marketing. Profesionalismo y resultados a tu alcance.
+              Impulsamos tu crecimiento con soluciones en asesoría fiscal, contabilidad, cumplimiento, seguridad social. Profesionalismo y resultados a tu alcance.
             </p>
             <div className="flex gap-4 justify-center flex-wrap mt-8">
               <button
@@ -267,14 +267,14 @@ const Home = () => {
             {[
               {
                 icon: '👥',
-                title: 'Nóminas',
+                title: 'Seguridad social',
                 description: 'Administramos tu nómina de forma integral, garantizando pagos puntuales, cálculos exactos y cumplimiento de obligaciones laborales.'
-              },
-              {
-                icon: '📢',
-                title: 'Marketing',
-                description: 'Creamos estrategias de marketing efectivas para posicionar tu marca, aumentar tu visibilidad y atraer más clientes.'
               }
+            //   {
+            //     icon: '📢',
+            //     title: 'Marketing',
+            //     description: 'Creamos estrategias de marketing efectivas para posicionar tu marca, aumentar tu visibilidad y atraer más clientes.'
+            //   }
             ].map((service, index) => (
               <div 
                 key={index}
@@ -337,7 +337,7 @@ const Home = () => {
                 {/* Header */}
                 <div className="text-center mb-12 sm:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight">
-                    Nuestros Resultados Hablan por Sí Solos
+                    Nuestros resultados hablan por sí solos
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-xl sm:max-w-2xl mx-auto leading-relaxed px-4">
                     La confianza de nuestros clientes se refleja en estos números
@@ -492,8 +492,7 @@ const Home = () => {
                   'Asesoría Fiscal',
                   'Contabilidad', 
                   'Cumplimiento Fiscal',
-                  'Nóminas',
-                  'Marketing'
+                  'Seguridad social'
                 ].map((service, index) => (
                   <li key={index}>
                     <button
