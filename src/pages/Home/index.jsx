@@ -203,23 +203,21 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="servicios" className="py-25 relative" style={{
-        background: 'linear-gradient(135deg, #f8fafc 0%, #e6f2ff 100%)'
-      }}>
-        <div className="w-full px-40 mx-auto">
-          <div className="text-center mb-16">
-            <div className="text-[#0066cc] uppercase text-sm font-semibold mb-4 tracking-widest">
+      <section id="servicios" className="py-12 sm:py-16 md:py-20 lg:py-25 relative" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #e6f2ff 100%)' }}>
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-40 mx-auto">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="text-[#0066cc] uppercase text-xs sm:text-sm font-semibold mb-3 sm:mb-4 tracking-widest">
               NUESTROS SERVICIOS
             </div>
-            <h2 className="text-4xl md:text-5xl text-[#00418c] mb-4 font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#00418c] mb-3 sm:mb-4 font-bold leading-tight">
               Soluciones Profesionales que Impulsan tu Negocio
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
               Brindamos servicios diseñados para optimizar tus recursos, garantizar el cumplimiento y fortalecer tu competitividad en el mercado.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-16">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-12 md:mt-16">
             {[
               {
                 icon: '📊',
@@ -242,18 +240,16 @@ const Home = () => {
                 description: 'Administramos tu nómina de forma integral, garantizando pagos puntuales, cálculos exactos y cumplimiento de obligaciones laborales.'
               }
             ].map((service, index) => (
-              <div 
+              <div
                 key={index}
-                className="group bg-white p-8 rounded-2xl shadow-xl text-center relative overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
-                style={{
-                  boxShadow: '0 10px 40px rgba(0, 65, 140, 0.1)'
-                }}
+                className="group bg-white p-6 sm:p-8 rounded-2xl shadow-xl text-center relative overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+                style={{ boxShadow: '0 10px 40px rgba(0, 65, 140, 0.1)' }}
               >
                 {/* Top border effect */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0066cc] to-[#00418c] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                
-                <div 
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-8 text-white text-3xl shadow-lg"
+
+                <div
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8 text-white text-2xl sm:text-3xl shadow-lg"
                   style={{
                     background: 'linear-gradient(135deg, #0066cc 0%, #00418c 100%)',
                     boxShadow: '0 8px 25px rgba(0, 65, 140, 0.3)'
@@ -261,15 +257,18 @@ const Home = () => {
                 >
                   {service.icon}
                 </div>
-                <h3 className="text-[#00418c] mb-6 text-2xl font-semibold">
+
+                <h3 className="text-[#00418c] mb-4 sm:mb-6 text-xl sm:text-2xl font-semibold">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed mb-8">
+
+                <p className="text-slate-600 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
                   {service.description}
                 </p>
+
                 <button
                   onClick={() => scrollToSection('contacto')}
-                  className="text-[#0066cc] cursor-pointer font-semibold hover:text-[#00418c] transition-colors duration-300"
+                  className="text-[#0066cc] cursor-pointer font-semibold hover:text-[#00418c] transition-colors duration-300 text-sm sm:text-base"
                 >
                   Solicitar información →
                 </button>
