@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import logo from '../../assets/logopng_azul.png';
 import ContactForm from '../../components/ContactForm';
+import { FaIndustry, FaCogs, FaStore, FaTractor, FaHammer, FaShoppingCart } from 'react-icons/fa';
+import fondo from '../../../src/assets/fondo.jpg';
 
 
 const Home = () => {
@@ -308,6 +310,132 @@ const Home = () => {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section 
+ className="relative py-32 text-white text-center overflow-hidden"
+ style={{
+   backgroundImage: `url(${fondo})`,
+   backgroundSize: 'cover',
+   backgroundPosition: 'center',
+   backgroundAttachment: 'fixed'
+ }}
+>
+ {/* Dark overlay */}
+ <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/70 to-blue-800/80"></div>
+ 
+ {/* Particles effect */}
+ <div 
+   className="absolute inset-0 opacity-20"
+   style={{
+     background: `
+       radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+       radial-gradient(circle at 75% 75%, rgba(30, 58, 138, 0.3) 0%, transparent 50%)
+     `
+   }}
+ />
+ 
+ {/* Content */}
+ <div className="max-w-5xl mx-auto px-5 relative z-10">
+   <div className="mb-6">
+     <span className="inline-block bg-blue-100/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold tracking-widest border border-blue-400/30">
+       AS SOLUCIONES HIGHLIGHTS
+     </span>
+   </div>
+   
+   <h2 className="text-4xl md:text-6xl mb-8 font-bold bg-gradient-to-br from-white to-white bg-clip-text text-transparent leading-tight">
+     Comprometidos con el crecimiento de tu empresa
+   </h2>
+   
+   <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-4xl mx-auto leading-relaxed text-white">
+     Nuestro equipo combina experiencia y dedicación para ofrecer soluciones fiscales, contables y administrativas que impulsan a nuestros clientes a alcanzar sus metas.
+   </p>
+   
+   <button 
+      onClick={() => scrollToSection('contacto')}
+      className="group relative bg-white/10 backdrop-blur-lg text-white border-2 border-white/30 px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 hover:bg-white hover:text-blue-800 hover:border-white cursor-pointer"
+    >
+      <span className="relative z-10">Descúbrelo</span>
+      <div className="absolute inset-0 bg-white rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></div>
+    </button>
+ </div>
+ 
+ {/* Bottom fade effect */}
+ <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-slate-50 to-transparent"></div>
+</section>
+
+      <section className="bg-gradient-to-br from-slate-50 to-indigo-100 py-20 relative">
+        <div className="max-w-6xl mx-auto px-5">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="text-blue-500 uppercase text-sm font-semibold mb-4 tracking-widest">
+              SECTORES QUE ATENDEMOS
+            </div>
+            <h2 className="text-4xl md:text-5xl text-blue-800 mb-4 font-bold">
+              Atendiendo Múltiples Industrias
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Trabajamos con empresas de todos los sectores económicos, ofreciendo soluciones especializadas para cada industria.
+            </p>
+          </div>
+          
+          {/* Industries Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
+            {/* Sector Primario */}
+            <div className="group bg-white p-8 rounded-2xl shadow-xl text-center relative overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+                style={{ boxShadow: '0 10px 40px rgba(30, 58, 138, 0.1)' }}>
+              {/* Top border effect */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl shadow-lg"
+                  style={{ boxShadow: '0 8px 25px rgba(34, 197, 94, 0.3)' }}>
+                <FaTractor />
+              </div>
+              <h3 className="text-blue-800 mb-4 text-2xl font-semibold">
+                Sector Primario
+              </h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Agricultura, ganadería, pesca, silvicultura y minería.
+              </p>
+            </div>
+
+            {/* Sector Secundario */}
+            <div className="group bg-white p-8 rounded-2xl shadow-xl text-center relative overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+                style={{ boxShadow: '0 10px 40px rgba(30, 58, 138, 0.1)' }}>
+              {/* Top border effect */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl shadow-lg"
+                  style={{ boxShadow: '0 8px 25px rgba(249, 115, 22, 0.3)' }}>
+                <FaIndustry />
+              </div>
+              <h3 className="text-blue-800 mb-4 text-2xl font-semibold">
+                Sector Secundario
+              </h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Industria manufacturera, automotriz, aeroespacial, electrónica, construcción, minería y petróleo, generación de energía.
+              </p>
+            </div>
+
+            {/* Sector Terciario */}
+            <div className="group bg-white p-8 rounded-2xl shadow-xl text-center relative overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+                style={{ boxShadow: '0 10px 40px rgba(30, 58, 138, 0.1)' }}>
+              {/* Top border effect */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl shadow-lg"
+                  style={{ boxShadow: '0 8px 25px rgba(147, 51, 234, 0.3)' }}>
+                <FaStore />
+              </div>
+              <h3 className="text-blue-800 mb-4 text-2xl font-semibold">
+                Sector Terciario
+              </h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Comercio, turismo, transporte, comunicaciones, servicios financieros, educación, salud, logística y tecnología de la información.
+              </p>
+            </div>
           </div>
         </div>
       </section>
