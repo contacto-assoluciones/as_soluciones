@@ -127,9 +127,9 @@ const Home = () => {
             </button>
           </nav>
 
-          {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-white flex flex-col p-4 shadow-xl z-[1000]">
+              {/* Elementos de navegación */}
               {[
                 { id: 'inicio', label: t('nav.home') },
                 { id: 'servicios', label: t('nav.services') },
@@ -144,6 +144,21 @@ const Home = () => {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Separador */}
+              <div className="border-t border-gray-200 my-3"></div>
+              
+              {/* Botón de idioma para móvil */}
+              <button
+                onClick={() => {
+                  i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es');
+                  setIsMenuOpen(false); // Cerrar el menú después del cambio
+                }}
+                className="bg-white border border-[#00418c] text-[#00418c] px-4 py-2 rounded-full font-medium hover:bg-[#00418c] hover:text-white transition-all duration-300 mx-auto"
+                aria-label={t('a11y.toggleLanguage')}
+              >
+                {i18n.language === 'es' ? t('common.english') : t('common.spanish')}
+              </button>
             </div>
           )}
         </div>
