@@ -1,0 +1,134 @@
+{
+  "common": {
+    "brand": "AS Soluciones",
+    "logoAlt": "AS Soluciones logo",
+    "english": "ENGLISH",
+    "spanish": "ESPAÑOL"
+  },
+  "a11y": {
+    "toggleMenu": "Open or close menu",
+    "toggleLanguage": "Toggle language"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "alerts": {
+    "thanks": "Thanks for your message! We'll get back to you within the next 24 hours."
+  },
+  "home": {
+    "heroTitle": "Comprehensive Consulting for Your Business",
+    "heroDescription": "We drive your growth with solutions in tax advisory, accounting, compliance, and social security. Professionalism and results within your reach.",
+    "cta": "Book your consultation",
+    "viewServices": "View services"
+  },
+  "services": {
+    "kicker": "Our Services",
+    "title": "Professional Solutions that Power Your Business",
+    "subtitle": "We provide services designed to optimize your resources, ensure compliance, and strengthen your competitiveness.",
+    "cta": "Request information →",
+    "items": {
+      "tax": {
+        "title": "Tax Advisory",
+        "desc": "We design tailored tax strategies to legally and safely optimize your tax burden, reducing risks and improving profitability."
+      },
+      "accounting": {
+        "title": "Accounting",
+        "desc": "We manage your accounting with precision and transparency, delivering clear financial information for strategic decisions."
+      },
+      "compliance": {
+        "title": "Compliance",
+        "desc": "We ensure your company meets all tax requirements on time, maintaining a spotless record with the authorities."
+      },
+      "payroll": {
+        "title": "Social Security",
+        "desc": "We manage your payroll end-to-end, guaranteeing on-time payments, accurate calculations and full labor compliance."
+      }
+    }
+  },
+  "highlight": {
+    "kicker": "AS SOLUCIONES HIGHLIGHTS",
+    "title": "Committed to Your Company’s Growth",
+    "subtitle": "Our team blends experience and dedication to deliver tax, accounting, and administrative solutions that help clients reach their goals.",
+    "cta": "Discover more"
+  },
+  "sectors": {
+    "kicker": "Industries We Serve",
+    "title": "Serving Multiple Sectors",
+    "subtitle": "We work with companies across all economic sectors, providing tailored solutions for each industry.",
+    "primary": {
+      "title": "Primary Sector",
+      "desc": "Agriculture, livestock, fishing, forestry, and mining."
+    },
+    "secondary": {
+      "title": "Secondary Sector",
+      "desc": "Manufacturing, automotive, aerospace, electronics, construction, mining & oil, and power generation."
+    },
+    "tertiary": {
+      "title": "Tertiary Sector",
+      "desc": "Commerce, tourism, transportation, communications, financial services, education, health, logistics, and information technology."
+    }
+  },
+  "stats": {
+    "title": "Our Results Speak for Themselves",
+    "subtitle": "Client trust is reflected in these numbers",
+    "items": {
+      "years": {
+        "title": "Years of Experience",
+        "desc": "Helping companies grow"
+      },
+      "satisfaction": {
+        "title": "Client Satisfaction",
+        "desc": "Successful cases"
+      }
+    }
+  },
+  "why": {
+    "title": "Why Choose AS Soluciones?",
+    "subtitle": "We act as strategic partners for your business. We combine experience, personalized attention and innovative solutions to help you reach your goals efficiently and confidently.",
+    "ctaPrimary": "Start now",
+    "ctaSecondary": "Call now"
+  },
+  "contact": {
+    "title": "Let's Talk About Your Project",
+    "subtitle": "Tell us your needs and we’ll show you how we can help take your company to the next level.",
+    "hours": "Monday to Friday from 9:00 AM to 6:00 PM",
+    "form": {
+      "labels": {
+        "name": "First name",
+        "lastname": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "company": "Company",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "First name *",
+        "lastname": "Last name *",
+        "email": "Email *",
+        "phone": "Phone",
+        "company": "Company",
+        "message": "How can we help you? *"
+      },
+      "sending": "SENDING...",
+      "send": "SEND MESSAGE",
+      "success": "Message sent! We’ll get back to you soon.",
+      "errors": {
+        "required": "Please complete all required fields",
+        "email": "Enter a valid email address",
+        "generic": "Could not send. Please try again.",
+        "recipientEmpty": "Recipient is missing in the template. In EmailJS, set Auto-reply: To → {{to_email}}."
+      }
+    }
+  },
+  "footer": {
+    "brandTitle": "AS Soluciones",
+    "brandDesc": "End-to-end consulting focused on results. We support clients at every stage, from tax compliance to commercial growth.",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "book": "Book your consultation",
+    "rights": "All rights reserved."
+  }
+}

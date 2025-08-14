@@ -1,0 +1,138 @@
+{
+  "common": {
+    "brand": "AS Soluciones",
+    "logoAlt": "Logo de AS Soluciones",
+    "english": "EN",
+    "spanish": "ES"
+  },
+  "a11y": {
+    "toggleMenu": "Abrir o cerrar menú",
+    "toggleLanguage": "Cambiar idioma"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "alerts": {
+    "thanks": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo dentro de las próximas 24 horas."
+  },
+  "home": {
+    "heroTitle": "Consultoría Integral para tu Empresa",
+    "heroDescription": "Impulsamos tu crecimiento con soluciones en asesoría fiscal, contabilidad, cumplimiento, y seguridad social. Profesionalismo y resultados a tu alcance.",
+    "cta": "Agenda tu consulta",
+    "viewServices": "Ver servicios"
+  },
+  "services": {
+    "kicker": "Nuestros servicios",
+    "title": "Soluciones Profesionales que Impulsan tu Negocio",
+    "subtitle": "Brindamos servicios diseñados para optimizar tus recursos, garantizar el cumplimiento y fortalecer tu competitividad en el mercado.",
+    "cta": "Solicitar información →",
+    "items": {
+      "tax": {
+        "title": "Asesoría Fiscal",
+        "desc": "Diseñamos estrategias tributarias personalizadas para optimizar tu carga fiscal de forma legal y segura, evitando riesgos y mejorando la rentabilidad."
+      },
+      "accounting": {
+        "title": "Contabilidad",
+        "desc": "Llevamos el control contable de tu negocio con precisión y transparencia, entregando información financiera clara para decisiones estratégicas."
+      },
+      "compliance": {
+        "title": "Cumplimiento Fiscal",
+        "desc": "Aseguramos que tu empresa cumpla con todas las disposiciones fiscales a tiempo, manteniendo un historial impecable ante las autoridades."
+      },
+      "payroll": {
+        "title": "Seguridad social",
+        "desc": "Administramos tu nómina de forma integral, garantizando pagos puntuales, cálculos exactos y cumplimiento de obligaciones laborales."
+      }
+    }
+  },
+  "highlight": {
+    "kicker": "AS SOLUCIONES HIGHLIGHTS",
+    "title": "Comprometidos con el crecimiento de tu empresa",
+    "subtitle": "Nuestro equipo combina experiencia y dedicación para ofrecer soluciones fiscales, contables y administrativas que impulsan a nuestros clientes a alcanzar sus metas.",
+    "cta": "Descúbrelo"
+  },
+  "sectors": {
+    "kicker": "Sectores que atendemos",
+    "title": "Atendiendo Múltiples Sectores",
+    "subtitle": "Trabajamos con empresas de todos los sectores económicos, ofreciendo soluciones especializadas para cada industria.",
+    "primary": {
+      "title": "Sector Primario",
+      "desc": "Agricultura, ganadería, pesca, silvicultura y minería."
+    },
+    "secondary": {
+      "title": "Sector Secundario",
+      "desc": "Industria manufacturera, automotriz, aeroespacial, electrónica, construcción, minería y petróleo, generación de energía."
+    },
+    "tertiary": {
+      "title": "Sector Terciario",
+      "desc": "Comercio, turismo, transporte, comunicaciones, servicios financieros, educación, salud, logística y tecnología de la información."
+    }
+  },
+  "stats": {
+    "title": "Nuestros resultados hablan por sí solos",
+    "subtitle": "La confianza de nuestros clientes se refleja en estos números",
+    "items": {
+      "years": {
+        "title": "Años de Experiencia",
+        "desc": "Consolidando empresas"
+      },
+      "satisfaction": {
+        "title": "Satisfacción Cliente",
+        "desc": "Casos exitosos"
+      }
+    }
+  },
+  "why": {
+    "title": "¿Por Qué Elegir AS Soluciones?",
+    "subtitle": "Trabajamos como aliados estratégicos de tu negocio. Combinamos experiencia, atención personalizada y soluciones innovadoras para que alcances tus objetivos con eficiencia y confianza.",
+    "ctaPrimary": "Comenzar ahora",
+    "ctaSecondary": "Llamar ahora"
+  },
+  "contact": {
+    "title": "Hablemos de tu Proyecto",
+    "subtitle": "Cuéntanos tus necesidades y te mostraremos cómo podemos ayudarte a llevar tu empresa al siguiente nivel.",
+    "hours": "Lunes a viernes de 9:00 AM a 6:00 PM",
+    "form": {
+      "labels": {
+        "name": "Nombre",
+        "lastname": "Apellido",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "company": "Empresa",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Nombre *",
+        "lastname": "Apellido *",
+        "email": "Correo Electrónico *",
+        "phone": "Teléfono",
+        "company": "Empresa",
+        "message": "¿Cómo podemos ayudarte? *"
+      },
+      "sending": "ENVIANDO...",
+      "send": "ENVIAR MENSAJE",
+      "success": "¡Mensaje enviado correctamente! Te responderemos pronto.",
+      "errors": {
+        "required": "Por favor completa todos los campos obligatorios",
+        "email": "Ingresa un correo electrónico válido",
+        "generic": "No se pudo enviar. Intenta nuevamente.",
+        "recipientEmpty": "Falta el destinatario en el template. En EmailJS, pon en el auto-reply: To → {{to_email}}."
+      }
+    }
+  },
+  "footer": {
+    "brandTitle": "AS Soluciones",
+    "brandDesc": "Consultoría integral con enfoque en resultados. Acompañamos a nuestros clientes en cada etapa, desde el cumplimiento fiscal hasta el crecimiento comercial.",
+    "servicesTitle": "Servicios",
+    "contactTitle": "Contacto",
+    "book": "Agenda tu consulta",
+    "rights": "Todos los derechos reservados."
+  }
+
+  
+}
+
+

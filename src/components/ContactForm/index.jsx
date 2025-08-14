@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 const SERVICE_ID = 'service_iox8zpt';
 const TEMPLATE_MAIN = 'template_b87l7kg';      // correo que te llega a ti (To fijo en EmailJS)
@@ -7,6 +8,8 @@ const TEMPLATE_AUTOREPLY = 'template_sascql7'; // auto-reply al cliente (To: {{t
 const PUBLIC_KEY = '_bd3hPo4BImhy6qbL';
 
 const ContactForm = () => {
+  const { t, i18n } = useTranslation();
+
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -36,42 +39,39 @@ const ContactForm = () => {
     const mensaje = formData.mensaje.trim();
 
     if (!nombre || !apellido || !email || !mensaje) {
-      setStatus({ type: 'error', message: 'Por favor completa todos los campos obligatorios' });
+      setStatus({ type: 'error', message: t('contact.form.errors.required') });
       return;
     }
     if (!isValidEmail(email)) {
-      setStatus({ type: 'error', message: 'Ingresa un correo electrónico válido' });
+      setStatus({ type: 'error', message: t('contact.form.errors.email') });
       return;
     }
 
     setIsLoading(true);
     setStatus({ type: '', message: '' });
 
-    const fecha = new Date().toLocaleString('es-MX', {
+    const fecha = new Date().toLocaleString(i18n.language === 'es' ? 'es-MX' : 'en-US', {
       year: 'numeric', month: 'long', day: 'numeric',
       hour: '2-digit', minute: '2-digit'
     });
 
     // === Params para el correo principal (a ti) ===
-    // En EmailJS: el campo "To" del template_b87l7kg debe ser TU correo fijo (no variable).
     const mainParams = {
       from_name: `${nombre} ${apellido}`,
       from_email: email,
-      reply_to: email, // útil para responder directo
+      reply_to: email,
       phone: formData.telefono,
       company: formData.empresa,
       message: mensaje,
       fecha
-      // Si tu template marca otras variables como obligatorias, agrégalas aquí con el MISMO nombre.
     };
 
     // === Params para el auto-reply (al cliente) ===
-    // En EmailJS: en template_sascql7 pon To: {{to_email}}
     const autoReplyParams = {
       to_name: nombre,
-      to_email: email,  // <-- clave para que no marque "The recipients address is empty"
-      message: mensaje, // por si tu template lo usa
-      reply_to: email,  // por si tu template lo pide
+      to_email: email,  // IMPORTANT: debe existir en el template como {{to_email}}
+      message: mensaje,
+      reply_to: email,
       fecha
     };
 
@@ -82,7 +82,7 @@ const ContactForm = () => {
       // 2) Auto-reply
       await emailjs.send(SERVICE_ID, TEMPLATE_AUTOREPLY, autoReplyParams, PUBLIC_KEY);
 
-      setStatus({ type: 'success', message: '¡Mensaje enviado correctamente! Te responderemos pronto.' });
+      setStatus({ type: 'success', message: t('contact.form.success') });
       setFormData({
         nombre: '',
         apellido: '',
@@ -99,9 +99,9 @@ const ContactForm = () => {
         details: error
       });
 
-      let msg = 'No se pudo enviar. Intenta nuevamente.';
+      let msg = t('contact.form.errors.generic');
       if (error?.status === 422 && /recipients address is empty/i.test(error?.text || '')) {
-        msg = 'Falta el destinatario en el template. En EmailJS, pon en el auto-reply: To → {{to_email}}.';
+        msg = t('contact.form.errors.recipientEmpty');
       }
 
       setStatus({ type: 'error', message: msg });
@@ -129,18 +129,20 @@ const ContactForm = () => {
           name="nombre"
           value={formData.nombre}
           onChange={handleChange}
-          placeholder="Nombre *"
+          placeholder={t('contact.form.placeholders.name')}
           className="p-3 sm:p-4 border border-white/30 rounded-xl bg-white/10 text-white placeholder-white/70 backdrop-blur-sm focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all duration-300 text-sm sm:text-base"
           required
+          aria-label={t('contact.form.labels.name')}
         />
         <input
           type="text"
           name="apellido"
           value={formData.apellido}
           onChange={handleChange}
-          placeholder="Apellido *"
+          placeholder={t('contact.form.placeholders.lastname')}
           className="p-3 sm:p-4 border border-white/30 rounded-xl bg-white/10 text-white placeholder-white/70 backdrop-blur-sm focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all duration-300 text-sm sm:text-base"
           required
+          aria-label={t('contact.form.labels.lastname')}
         />
       </div>
 
@@ -149,9 +151,10 @@ const ContactForm = () => {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        placeholder="Correo Electrónico *"
+        placeholder={t('contact.form.placeholders.email')}
         className="p-3 sm:p-4 border border-white/30 rounded-xl bg-white/10 text-white placeholder-white/70 backdrop-blur-sm focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all duration-300 text-sm sm:text-base"
         required
+        aria-label={t('contact.form.labels.email')}
       />
 
       <input
@@ -159,8 +162,9 @@ const ContactForm = () => {
         name="telefono"
         value={formData.telefono}
         onChange={handleChange}
-        placeholder="Teléfono"
+        placeholder={t('contact.form.placeholders.phone')}
         className="p-3 sm:p-4 border border-white/30 rounded-xl bg-white/10 text-white placeholder-white/70 backdrop-blur-sm focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all duration-300 text-sm sm:text-base"
+        aria-label={t('contact.form.labels.phone')}
       />
 
       <input
@@ -168,18 +172,20 @@ const ContactForm = () => {
         name="empresa"
         value={formData.empresa}
         onChange={handleChange}
-        placeholder="Empresa"
+        placeholder={t('contact.form.placeholders.company')}
         className="p-3 sm:p-4 border border-white/30 rounded-xl bg-white/10 text-white placeholder-white/70 backdrop-blur-sm focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all duration-300 text-sm sm:text-base"
+        aria-label={t('contact.form.labels.company')}
       />
 
       <textarea
         name="mensaje"
         value={formData.mensaje}
         onChange={handleChange}
-        placeholder="¿Cómo podemos ayudarte? *"
+        placeholder={t('contact.form.placeholders.message')}
         rows="4"
         className="p-3 sm:p-4 border border-white/30 rounded-xl bg-white/10 text-white placeholder-white/70 backdrop-blur-sm focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all duration-300 resize-y text-sm sm:text-base"
         required
+        aria-label={t('contact.form.labels.message')}
       />
 
       {status.message && (
@@ -189,6 +195,7 @@ const ContactForm = () => {
               ? 'bg-green-500/20 text-green-200 border border-green-500/30'
               : 'bg-red-500/20 text-red-200 border border-red-500/30'
           }`}
+          role={status.type === 'success' ? 'status' : 'alert'}
         >
           {status.message}
         </div>
@@ -201,8 +208,9 @@ const ContactForm = () => {
           isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-0.5 hover:shadow-xl cursor-pointer'
         }`}
         style={{ boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)' }}
+        aria-busy={isLoading}
       >
-        {isLoading ? 'ENVIANDO...' : 'ENVIAR MENSAJE'}
+        {isLoading ? t('contact.form.sending') : t('contact.form.send')}
       </button>
     </form>
   );
