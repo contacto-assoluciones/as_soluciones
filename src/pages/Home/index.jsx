@@ -345,7 +345,7 @@ const Home = () => {
               SECTORES QUE ATENDEMOS
             </div>
             <h2 className="text-4xl md:text-5xl text-[#00418c] mb-4 font-bold">
-              Atendiendo Múltiples Industrias
+              Atendiendo Múltiples Sectores
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Trabajamos con empresas de todos los sectores económicos, ofreciendo soluciones especializadas para cada industria.
