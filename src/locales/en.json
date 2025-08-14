@@ -2,8 +2,8 @@
   "common": {
     "brand": "AS Soluciones",
     "logoAlt": "AS Soluciones logo",
-    "english": "ENGLISH",
-    "spanish": "ESPAÑOL"
+    "english": "EN",
+    "spanish": "ES"
   },
   "a11y": {
     "toggleMenu": "Open or close menu",
