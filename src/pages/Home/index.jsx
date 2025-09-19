@@ -445,7 +445,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12 lg:gap-20">
             {[
               { target: 5, suffix: '', label: t('stats.items.years.title'), description: t('stats.items.years.desc') },
-              { target: 97, suffix: '%', label: t('stats.items.satisfaction.title'), description: t('stats.items.satisfaction.desc') },
+              { target: 28, label: t('stats.items.satisfaction.title'), description: t('stats.items.satisfaction.desc') },
             ].map((stat, index) => (
               <div key={index} className="group relative w-full sm:w-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl sm:rounded-3xl blur-sm" />
