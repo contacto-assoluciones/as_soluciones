@@ -3,6 +3,7 @@ import logo from '../../assets/logopng_azul.png';
 import ContactForm from '../../components/ContactForm';
 import { FaIndustry, FaStore, FaTractor } from 'react-icons/fa';
 import fondo from '../../../src/assets/fondo.jpg';
+import SocialCard from '../../components/SocialCard';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
@@ -603,6 +604,7 @@ const Home = () => {
                     {t('footer.book')}
                   </button>
                 </li>
+                <SocialCard/>
               </ul>
             </div>
           </div>
