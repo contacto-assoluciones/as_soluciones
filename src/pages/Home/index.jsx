@@ -590,10 +590,10 @@ const Home = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:Contacto@assoluciones.com"
+                    href="mailto:Tere_aguilar@gbyl.onmicrosoft.com"
                     className="text-slate-400 hover:text-[#66b3ff] transition-colors duration-300"
                   >
-                    Contacto@assoluciones.com
+                    Tere_aguilar@gbyl.onmicrosoft.com
                   </a>
                 </li>
                 <li>
