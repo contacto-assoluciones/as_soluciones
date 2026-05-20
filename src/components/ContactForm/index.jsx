@@ -2,10 +2,10 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
 
-const SERVICE_ID = 'service_iox8zpt';
-const TEMPLATE_MAIN = 'template_b87l7kg';      // correo que te llega a ti (To fijo en EmailJS)
-const TEMPLATE_AUTOREPLY = 'template_sascql7'; // auto-reply al cliente (To: {{to_email}})
-const PUBLIC_KEY = '_bd3hPo4BImhy6qbL';
+const SERVICE_ID = 'service_gxcwv4y';
+const TEMPLATE_MAIN = 'template_9n4mhds';
+const TEMPLATE_AUTOREPLY = 'template_xvxzrf4';
+const PUBLIC_KEY = 'dJY8hEvl5k8GPOgTy';
 
 const ContactForm = () => {
   const { t, i18n } = useTranslation();
